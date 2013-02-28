@@ -1,0 +1,191 @@
+CSS3 on Home Page
+
+For this lesson, I added the following Twitter Bootstrap Customize features to my home page:
+
+1) Pill-style menu for my class projects
+
+2) Grid-based menu for my list of class projects
+
+3) A carousel-style slideshow with photos of my children
+
+4) My introduction
+
+5) My goals for this class
+
+6) A plan for my Final Project.
+
+Here is the HTML code for my home page:
+
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+
+  <head>
+   <title> Lisa Davis HTML5 Interactive Websites </title>
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+   <link type="text/css" rel="stylesheet" href="style.css">
+   <link type="text/css" rel="stylesheet" href="style2.css">
+   <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+  <header class="row">
+
+    <div class="span12">
+      <h1>Lisa Davis- HTML5 - Interactive Websites</h1>
+
+    </div>
+
+  </header>
+
+  <br>
+
+<div class="container">
+    <div class="row">
+      <section class="span3">
+  <img src="images/me.jpg" class="img-polaroid" alt="Lisa" height="150" width="210px" />
+        <div class="organizer"> <h2> Class Projects</h2>
+        <ul class="nav nav-pills">
+          <li>
+            <a href="css3.html"> <strong> Lesson 3 </strong> - CSS3</a> 
+          </li>
+          <li>
+            <a href="canvas/canvas.html"> <strong> Lesson 4 </strong> - Canvas </a>
+          </li>
+          <li>
+            <a href="svg.html"> <strong> Lesson 5 </strong> - SVG</a> 
+          </li>
+          <li>
+            <a href="media.html"> <strong> Lesson 6 </strong> - Media</a>   
+          </li>
+          <li>
+           <a href="animations.html"> <strong> Lesson 7 </strong>- Animations</a> 
+          </li>
+          <li>
+            <a href="forms.html"> <strong> Lesson 8 </strong>- Forms</a> 
+          </li>
+          <li>
+            <a href="time_and_place.html"> <strong> Lesson 9 </strong> - Time and Place</a> 
+          </li>
+          <li>
+            <a href="persistent_data.html"> <strong> Lesson 10 </strong> - Persistent Data</a> 
+          </li>
+          <li>
+            <a href="server.html"> <strong> Lesson 11 </strong> - Server Communication</a> 
+          </li>
+          <li>
+            <a href="security.html"> <strong> Lesson 12 </strong> - Security</a> 
+          </li>
+          <li>
+            <a href="mobile.html"> <strong> Lesson 13 </strong> - Mobile</a>
+          </li>
+          <li>
+            <a href="media_input"><strong> Lesson 14 </strong> - Media Input</a>
+          </li>
+          <li>
+            <a href="games.html"> <strong> Lesson 15 </strong> -  Game Development</a>
+          </li>
+          <li>
+            <a href="tools.html"> <strong> Lesson 16 </strong> -  Performance and Professional Tools</a>
+          </li>
+          <li>
+            <a href="final.html"><strong> Final </strong></a> 
+          </li>
+        </ul>
+      </section>
+
+	<section id="slideshow" class="span8">
+        <div id="myCarousel" class="carousel slide">
+        <ol class="carousel-indicators"></ol>
+        <!-- Carousel items -->
+        <div class="carousel-inner">
+          <div class="active item">
+            <img src="images/wheelbarrow.jpg" />
+            <div class="carousel-caption">
+              <h4 class="caption">Ashley and Christopher Pushing their Pumpkin</h4>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/ashley_chris.jpg" />
+            <div class="carousel-caption">
+              <h4 class="caption">Ashley and Christopher Sitting on a Pumpkin </h4>
+            </div>
+          </div>
+          <div class="item">
+            <img src="images/chris_tractor.jpg" />
+            <div class="carousel-caption">
+              <h4 class="caption">Christopher on the Tractor</h4>
+            </div>
+	   </div>
+	  <div class="item">
+            <img src="images/ashley_pyramid.jpg" />
+            <div class="carousel-caption">
+              <h4 class="caption">Ashley Climbing Down the Pyramid</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Carousel nav -->
+        <a class="carousel-control left" href="#myCarousel" data-slide="prev">‹</a> 
+        <a class="carousel-control right" href="#myCarousel" data-slide="next">›</a></div>
+
+	 <br><br>
+
+      
+      </section>
+
+   <div class="container-fluid">
+		
+   <h2>Introduction</h2> 
+
+   <p> My name is Lisa Davis. I am taking this class, because I enjoy programming. And ultimately, I would love to have a job             earning an income writing programs one day. 
+
+   <br> <br>  But, in the meantime, I am having lots of fun with my 4-year-old twins, Ashley and Christopher. The carousel slideshow (to the left) includes photos of us visiting The Great Peter Pumpkin Patch in Petaluma last Halloween. We had a great time!</p>
+
+   <h2> Class Goals</h2>
+
+   <p>This is a work in progress, but I would like to accomplish as many of these goals as possible during the           course of this class:</p>
+
+	<ol> 
+		<li>Learn how to add media, audio, and animation to my websites </li> <br>
+		<li>Practice my programming skills </li> <br>
+		<li>Make my websites look more professional </li> <br>
+		<li>Develop a journal of my kids using HTML5, javascript, and other software tools.<br> <br>
+		<li><strong> Final Project: </strong> Ultimately, I would like to create a family journal that                        includes audio and video recordings, photos, drawings, and my children's artwork</li>
+	</ol>
+
+
+  </div>
+
+</div>
+
+</section>
+</div>
+
+<div>
+
+    <footer class="row">
+	<div class="span12">
+     <p>  </p>
+     </div>
+    </footer>
+
+  </div>
+</div>
+</div>
+  <script src="http://code.jquery.com/jquery.js"></script> 
+  <script src="bootstrap/js/bootstrap.min.js"></script> 
+   <script src="bootstrap/js/bootstrap.min.js"></script> 
+  <script>
+  $(document).ready(function(){
+    $(&amp;amp;#39;.carousel&amp;amp;#39;).carousel({
+      interval: 5000
+    });
+  });
+  </script>
+
+</body>
+</html>
