@@ -1,0 +1,75 @@
+EaselJS's Stage Mouse Events
+
+Stage has a few special mouse events that come in handy for responding to general mouse interactions anywhere within your canvas. stagemousedown, stagemouseup and stagemousemove 
+are called any time a relevant mouse interaction happens anywhere on the canvas. 
+
+Here is the HTML Code for my Finger Paint demo:
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Finger Paint using EaselJS demo: Mouse Events on Stage</title>
+	<link href="demo.css" rel="stylesheet" type="text/css">
+	<link href="style.css" rel="stylesheet" type="text/css">
+	<script src="easeljs-0.6.0.min.js"></script>
+	<script>
+		var stage, label, shape, oldX, oldY, size, color;
+		
+		function init() {
+			stage = new createjs.Stage("demoCanvas");
+			stage.enableDOMEvents(true);
+			label = new createjs.Text("Finger Paint", "48px Cursive");
+			label.x = label.y = 10;
+			
+			shape = new createjs.Shape();
+			stage.addChild(shape, label);
+			
+			// set up our defaults:
+			color = "#0FF";
+			size = 2;
+			
+			// add handler for stage mouse events:
+			stage.addEventListener("stagemousedown", function(event) {
+				size = 10;
+			})                
+			
+			stage.addEventListener("stagemouseup", function(event) {
+				color = createjs.Graphics.getHSL(Math.random()*360, 100, 50);
+				size = 2;
+			})
+			 
+			
+		    stage.addEventListener("stagemousemove",function(evt) {
+				if (oldX) {
+					shape.graphics.beginStroke(color)
+								  .setStrokeStyle(size, "round")
+								  .moveTo(oldX, oldY)
+								  .lineTo(evt.stageX, evt.stageY);
+					stage.update();
+				}
+				oldX = evt.stageX;
+				oldY = evt.stageY;
+			})
+			
+			stage.update();
+		}
+	</script>
+</head>
+
+<body onLoad="init();">
+
+<header> <h1> EaselJS's Stage Mouse Events </h1> </header>
+
+<p> Stage has a few special mouse events that come in handy for responding to general mouse interactions anywhere within your canvas. 
+stagemousedown, stagemouseup and stagemousemove are called any time a relevant mouse interaction happens anywhere on the canvas. </p> <br>
+
+<h2> The following demo demonstrates using these events to let you finger paint on the canvas:  </h2>
+
+
+	<canvas id="demoCanvas" width="1500" height="1000">
+		alternate content
+	</canvas>
+
+</body>
+</html>
